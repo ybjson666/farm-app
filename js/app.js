@@ -8,8 +8,9 @@ $(function(){
 	var curPage=1;
 	var top=0;
 	var left=0;
-	var isWarter=false;
-	var count=0;
+	var isWarter=false;//能否浇水
+	var isClick=false;//能否点击其他土地
+	
 	
 	$('.pagination').pagination({
     	mode: 'fixed',
@@ -70,22 +71,19 @@ $(function(){
 	/**浇水 */
 	$("#kettle").click(function(e){
 		e.stopPropagation();
-		if(count==0){
-			count++;
+		if(!isWarter){
 			isWarter=true;
+			isClick=true;
 			left=32.8;
 			top=55;
 			$(this).css({transform:'translate(-20px,-50px) rotate(-30deg)',transition:'.3s'})
 			$("#kettleDown").fadeIn(300);
 		}
-		
-		
 	})
 
 	$(".water-block").click(function(e){
 		e.preventDefault();
 		hideKettle();
-		count--;
 	});
 	$("#kettleDown").click(function(e){
 		hideKettle();
@@ -94,8 +92,8 @@ $(function(){
 	function hideKettle(){
 		$("#kettle").css({transform:'translate(0px,0px) rotate(0deg)',transition:'.3s',
 		left:0,top:0,background:'url(./images/shuihu.png)','background-size':'100% 100%'});
-		$("#kettle").removeClass('warting');
 		$("#kettleDown").fadeOut(300);
+		isWarter=false;
 	}
 
 	$(".land").click(function(e){
@@ -142,12 +140,12 @@ $(function(){
 			default:
 				break;
 		}
-		if(isWarter){
+		if(isWarter&&isClick){
 			var absL=left-curL-2;
 			var absT=top-curT+3;
 			$("#kettle").css({'left':-absL+'rem','top':-absT+'rem','background':'url(./images/jiaoshui.gif)',
-			'background-size':'100% 100%',transform:'rotate(-10deg)', transition:'.5s'});
-			isWarter=false;
+			'background-size':'100% 100%',transform:'rotate(-10deg)', transition:'.3s'});
+			isClick=false;
 		}
 		
 	})
@@ -193,4 +191,27 @@ $(function(){
         
 	}
 	drawPie(data);
+
+	/*打开弹窗*/
+	function openModal(el){
+		$(el).removeClass('scalSmall').addClass('scalBig');
+	}
+	/*关闭弹窗*/
+	function closeModal(el){
+		$(el).removeClass('scalBig').addClass('scalSmall');
+	}
+
+	/**打开购买种子弹窗 */
+	$(".purchase").click(function(){
+		openModal(".seed-modal");
+	})
+	/**关闭购买种子弹窗 */
+	$(".seed-close-btn").click(function(){
+		closeModal(".seed-modal");
+	})
+
+	/**关闭金币不足弹窗 */
+	$(".coin-close-btn").click(function(){
+		closeModal(".coin-modal");
+	})
 })

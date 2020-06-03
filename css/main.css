@@ -93,7 +93,7 @@ html,body{
 	background-size: cover;
 	position: absolute;
 	left: 0;
-	right: 0;
+	top:0;
 	z-index: 20;
 }
 #kettleDown{
@@ -130,8 +130,7 @@ html,body{
 	width: 100%;
 	height: 100%;
 }
-
-.seed-modal{
+.modal{
 	position: fixed;
 	left: 0;
 	right: 0;
@@ -143,12 +142,14 @@ html,body{
 	align-items:center;
 	justify-content:center;
 }
-.seed-box{
+.modal-box{
 	width: 31.7rem;
-	height: 54.7rem;
 	background: rgba(255,255,255,.8);
 	border-radius: 1rem;
 	color: #434B56;
+}
+.seed-box{
+	height: 54.7rem;
 }
 .seed-title{
 	text-align: center;
@@ -170,4 +171,45 @@ html,body{
     width: 100%;
     left: 0;
     bottom: 1rem;
+}
+.scalSmall{
+	transform: scale(0);
+	transition: .3s;
+}
+.scalBig{
+	transform: scale(1);
+	transition: .3s;
+}
+.coin-box{
+	height: 28rem;
+}
+.coin-wraper{
+	width: 11.9rem;
+	height: 11.9rem;
+	display: flex;
+	align-items:center;
+	justify-content:center;
+	margin: 0 auto;
+	margin-top: 1rem;
+	margin-bottom: .3rem;
+}
+.alerting{
+	text-align: center;
+	font-size: 1.5rem;
+	line-height: 2.1rem;
+}
+.button{
+	display: block;
+	margin: 0 auto;
+	width: 12.1rem;
+	height: 3rem;
+	text-align: center;
+	line-height: 3rem;
+	background: #79D64D;
+	color: #fff;
+	font-size: 1.2rem;
+	border-radius: .5rem;
+}
+.vodio-btn{
+	margin-top: 2rem;
 }

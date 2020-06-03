@@ -82,7 +82,6 @@
 			<div class="purchase"><img src="./images/gmzz.png" alt=""></div>
 			<div class="water-block">
 				<div class="wrap">
-					<!-- <img src="./images/shuihu.png"  id="kettle" alt=""/> -->
 					<div id="kettle"></div>
 					<img src="./images/shuihu2.png"  id="kettleDown" alt=""/>
 					<div class="pie">
@@ -94,16 +93,31 @@
 	</div>
 	
 	<!--购买种子弹窗-->
-	<div class="seed-modal">
-		<div class="seed-box">
+	<div class="seed-modal scalSmall modal">
+		<div class="seed-box modal-box">
 			<div class="wrap">
-				<a href="javascript:" class="seed-close-btn">x</a>
+				<a href="javascript:" class="close-btn seed-close-btn">关闭</a>
 				<h2 class="seed-title">种子商店</h2>
 				<p class="seed-desc">任选下列1种种子，浇水免费领取水果</p>
 				<ul class="seed-list"></ul>
 				<div class="pagination-block">
 					<div class="pagination"></div>
 				</div>
+			</div>
+		</div>
+	</div>
+
+	<!--金币不足弹窗-->
+	<div class="coin-modal modal scalSmall">
+		<div class="coin-box modal-box">
+			<div class="wrap">
+				<a href="javascript:" class="close-btn coin-close-btn">关闭</a>
+				<h2 class="seed-title">金币不足</h2>
+				<div class="coin-wraper">
+					<img src="./images/coins.png" alt="">
+				</div>
+				<p class="alerting">您的金币不足哟，快去<br/> 看广告赚金币吧</p>
+				<a href="javascript:" class="button vodio-btn">看广告赚金币</a>
 			</div>
 		</div>
 	</div>
