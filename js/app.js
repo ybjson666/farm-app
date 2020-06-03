@@ -100,6 +100,7 @@ $(function(){
 		// e.preventDefault();
 		e.stopPropagation();
 		var index=$(this).index();
+		var curL=0,curT=0;
 		switch(index){
 			case 0 :
 				curL=19.5;
@@ -142,7 +143,7 @@ $(function(){
 		}
 		if(isWarter&&isClick){
 			var absL=left-curL-2;
-			var absT=top-curT+3;
+			var absT=top-curT+1;
 			$("#kettle").css({'left':-absL+'rem','top':-absT+'rem','background':'url(./images/jiaoshui.gif)',
 			'background-size':'100% 100%',transform:'rotate(-10deg)', transition:'.3s'});
 			isClick=false;
