@@ -12,21 +12,105 @@
 <body>
 	<div class="container">
 		<ul class="land-list">
-			<li class="land land-one "></li>
-			<li class="land land-two "></li>
-			<li class="land land-three "></li>
-			<li class="land land-four "></li>
-			<li class="land land-five "></li>
-			<li class="land land-six "></li>
-			<li class="land land-seven "></li>
-			<li class="land land-eight "></li>
-			<li class="land land-nine"></li>
+			<li class="land land-one ">
+				<div class="wrap">
+					<div class="unlock-pic land-pic"><img src="./images/tdwjs.png" alt=""></div>
+					<div class="lock-pic land-pic"><img src="./images/tdjs.png" alt=""></div>
+					<div class="seed-pic"><img src=""  class="seed" alt=""/></div>
+				</div>
+			</li>
+			<li class="land land-two">
+				<div class="wrap">
+					<div class="unlock-pic land-pic"><img src="./images/tdwjs.png" alt=""></div>
+					<div class="lock-pic land-pic"><img src="./images/tdjs.png" alt=""></div>
+					<div class="seed-pic"><img src=""  class="seed" alt=""/></div>
+				</div>
+			</li>
+			<li class="land land-three">
+				<div class="wrap">
+					<div class="unlock-pic land-pic"><img src="./images/tdwjs.png" alt=""></div>
+					<div class="lock-pic land-pic"><img src="./images/tdjs.png" alt=""></div>
+					<div class="seed-pic"><img src=""  class="seed" alt=""/></div>
+				</div>
+			</li>
+			<li class="land land-four">
+				<div class="wrap">
+					<div class="unlock-pic land-pic"><img src="./images/tdwjs.png" alt=""></div>
+					<div class="lock-pic land-pic"><img src="./images/tdjs.png" alt=""></div>
+					<div class="seed-pic"><img src=""  class="seed" alt=""/></div>
+				</div>
+			</li>
+			<li class="land land-five">
+				<div class="wrap">
+					<div class="unlock-pic land-pic"><img src="./images/tdwjs.png" alt=""></div>
+					<div class="lock-pic land-pic"><img src="./images/tdjs.png" alt=""></div>
+					<div class="seed-pic"><img src=""  class="seed" alt=""/></div>
+				</div>
+			</li>
+			<li class="land land-six">
+				<div class="wrap">
+					<div class="unlock-pic land-pic"><img src="./images/tdwjs.png" alt=""></div>
+					<div class="lock-pic land-pic"><img src="./images/tdjs.png" alt=""></div>
+					<div class="seed-pic"><img src=""  class="seed" alt=""/></div>
+				</div>
+			</li>
+			<li class="land land-seven">
+				<div class="wrap">
+					<div class="unlock-pic land-pic"><img src="./images/tdwjs.png" alt=""></div>
+					<div class="lock-pic land-pic"><img src="./images/tdjs.png" alt=""></div>
+					<div class="seed-pic"><img src=""  class="seed" alt=""/></div>
+				</div>
+			</li>
+			<li class="land land-eight">
+				<div class="wrap">
+					<div class="unlock-pic land-pic"><img src="./images/tdwjs.png" alt=""></div>
+					<div class="lock-pic land-pic"><img src="./images/tdjs.png" alt=""></div>
+					<div class="seed-pic"><img src=""  class="seed" alt=""/></div>
+				</div>
+			</li>
+			<li class="land land-nine">
+				<div class="wrap">
+					<div class="unlock-pic land-pic"><img src="./images/tdwjs.png" alt=""></div>
+					<div class="lock-pic land-pic"><img src="./images/tdjs.png" alt=""></div>
+					<div class="seed-pic"><img src=""  class="seed" alt=""/></div>
+				</div>
+			</li>
 		</ul>
+		<div class="foodgrocery"><img src="./images/caicang.png" alt=""></div>
+		<div class="shopping"><img src="./images/jysc.png" alt=""></div>
+		<div class="bottom-btns">
+			<div class="purchase"><img src="./images/gmzz.png" alt=""></div>
+			<div class="water-block">
+				<div class="wrap">
+					<!-- <img src="./images/shuihu.png"  id="kettle" alt=""/> -->
+					<div id="kettle"></div>
+					<img src="./images/shuihu2.png"  id="kettleDown" alt=""/>
+					<div class="pie">
+						<canvas id="canvas"></canvas>
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
-	<!-- <div class="pagination"></div> -->
+	
+	<!--购买种子弹窗-->
+	<div class="seed-modal">
+		<div class="seed-box">
+			<div class="wrap">
+				<a href="javascript:" class="seed-close-btn">x</a>
+				<h2 class="seed-title">种子商店</h2>
+				<p class="seed-desc">任选下列1种种子，浇水免费领取水果</p>
+				<ul class="seed-list"></ul>
+				<div class="pagination-block">
+					<div class="pagination"></div>
+				</div>
+			</div>
+		</div>
+	</div>
 </body>
 </html>
 <script src="js/jquery.min.js"></script>
+
 <script src="js/pagination.js"></script>
 <script src="js/tool.js"></script>
 <script src="js/app.js"></script>

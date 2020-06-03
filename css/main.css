@@ -9,9 +9,15 @@ html,body{
 }
 .container{
 	height: 100%;
-	padding: 4rem 0rem 4rem 16rem;
-	box-sizing: border-box;
 	width: 100%;
+	background-image: url('../images/bg.png');
+	background-repeat: no-repeat;
+	background-color: #9ad344;;
+	/* background-image: url('../images/bg.png') no-repeat; */
+	background-size: contain;
+	padding-top: 15rem;
+	box-sizing: border-box;
+	position: relative;
 }
 .land-list{
 	position: relative;
@@ -20,9 +26,148 @@ html,body{
 }
 .land{
 	position: absolute;
+	width: 11.9rem;
+	height: 7.7rem;
+}
+.land-pic{
+	width: 11.9rem;
+	height: 7.7rem;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+.land-pic img{
+	height: 100%;
+}
+.lock-pic{
+	display: none;
+}
+.unlock-pic{
+	display: block;
+}
+.seed-pic{
+	display: none;
+}
+.foodgrocery{
+	position: absolute;
 	width: 5rem;
 	height: 5rem;
-	background: #c0a174;
-	transform: rotate(45deg);
-	border-radius: 3px;
+	left: 1rem;
+	top:13rem;
+}
+.shopping{
+	position: absolute;
+	width: 5rem;
+	height: 5rem;
+	left: 1rem;
+	top: 21rem;
+}
+.bottom-btns{
+	position: absolute;
+	right: 1.5rem;
+	bottom: 9rem;
+}
+.purchase{
+	/* position: absolute; */
+	width: 5rem;
+	height: 5rem;
+	margin:0 auto;
+	margin-bottom: 2rem;
+	/* right: 2.6rem;
+	bottom: 17rem; */
+}
+.water-block{
+	width: 7rem;
+	height: 7rem;
+	/* position: absolute;
+	right: 1.5rem;
+	bottom: 8rem; */
+	background: url('../images/circle.png') no-repeat;
+	background-size: cover;
+}
+#kettle{
+	/* display: none; */
+	width: 100%;
+	height: 100%;
+	background: url('../images/shuihu.png') no-repeat;
+	background-size: cover;
+	position: absolute;
+	left: 0;
+	right: 0;
+	z-index: 20;
+}
+#kettleDown{
+	display: none;
+	width: 5rem;
+	margin: 0 auto;
+	position: absolute;
+	top:1rem;
+	left: 1rem;
+	
+}
+.warting{
+	animation: water .3s ease-in-out;
+}
+@keyframes water{
+	from{
+		transform: rotate(-10deg);
+	}
+	to{
+		transform: rotate(-10deg);
+	}
+}
+.pie{
+	width: 100%;
+    height: 100%;
+    border-radius: 50%;
+	z-index: 30;
+	position: absolute;
+	left: 0;
+	top:0;
+	display: none;
+}
+#canvas{
+	width: 100%;
+	height: 100%;
+}
+
+.seed-modal{
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	background: rgba(0,0,0,.3);
+	z-index: 50;
+	display: flex;
+	align-items:center;
+	justify-content:center;
+}
+.seed-box{
+	width: 31.7rem;
+	height: 54.7rem;
+	background: rgba(255,255,255,.8);
+	border-radius: 1rem;
+	color: #434B56;
+}
+.seed-title{
+	text-align: center;
+	font-size: 1.8rem;
+	font-weight: 400;
+	line-height:2.5rem;
+	margin-bottom: 0.3rem;
+}
+.seed-desc{
+	font-size: 1rem;
+	line-height: 1.4rem;
+	text-align: center;
+}
+.seed-list{
+	height: 20rem;
+}
+.pagination-block{
+	position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 1rem;
 }
