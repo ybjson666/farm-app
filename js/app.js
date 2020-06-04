@@ -11,6 +11,7 @@ $(function(){
 	var isWarter=false;//能否浇水
 	var isClick=false;//能否点击其他土地
 	var isFirst=localStorage.getItem('isFirst')||0;//0是第一次进来1不是;
+	var isWarting=false;//是否正在浇水
 
 	function guide(step){//引导过程函数
 		switch(step){
@@ -144,31 +145,37 @@ $(function(){
 	initLand();
 
 	/**浇水 */
-	$("#kettle").click(function(e){
+	$("#kettle").click(function(e){//端起水壶
 		e.stopPropagation();
 		if(!isWarter){
 			isWarter=true;
 			isClick=true;
+			isPort=true;
 			left=32.8;
 			top=55;
 			$(this).css({transform:'translate(-20px,-50px) rotate(-30deg)',transition:'.3s'})
 			$("#kettleDown").fadeIn(300);
 		}
 	})
-
-	// $(".water-block").click(function(e){
-	// 	e.preventDefault();
-	// 	hideKettle();
-	// });
-	// $("#kettleDown").click(function(e){
-	// 	hideKettle();
-	// })
+	$(".water-block").click(function(e){
+		e.preventDefault();
+		if(!isWarting){
+			hideKettle();
+		}
+		
+	});
+	$("#kettleDown").click(function(e){
+		if(!isWarting){
+			hideKettle();
+		}
+	})
 
 	function hideKettle(){
 		$("#kettle").css({transform:'translate(0px,0px) rotate(0deg)',transition:'.3s',
 		left:0,top:0,background:'url(./images/shuihu.png)','background-size':'100% 100%'});
 		$("#kettleDown").fadeOut(300);
 		isWarter=false;
+		isWarting=false;
 	}
 
 	$(".land").click(function(e){
@@ -222,6 +229,7 @@ $(function(){
 			$("#kettle").css({'left':-absL+'rem','top':-absT+'rem','background':'url(./images/jiaoshui.gif)',
 			'background-size':'100% 100%',transform:'rotate(-10deg)', transition:'.3s'});
 			isClick=false;
+			isWarting=true;
 			setTimeout(function(){
 				hideKettle();
 			},1200)
