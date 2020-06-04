@@ -13,7 +13,6 @@ html,body{
 	background-image: url('../images/bg.png');
 	background-repeat: no-repeat;
 	background-color: #9ad344;;
-	/* background-image: url('../images/bg.png') no-repeat; */
 	background-size: contain;
 	padding-top: 15rem;
 	box-sizing: border-box;
@@ -68,20 +67,14 @@ html,body{
 	bottom: 9rem;
 }
 .purchase{
-	/* position: absolute; */
 	width: 5rem;
 	height: 5rem;
 	margin:0 auto;
 	margin-bottom: 2rem;
-	/* right: 2.6rem;
-	bottom: 17rem; */
 }
 .water-block{
 	width: 7rem;
 	height: 7rem;
-	/* position: absolute;
-	right: 1.5rem;
-	bottom: 8rem; */
 	background: url('../images/circle.png') no-repeat;
 	background-size: cover;
 }
@@ -106,14 +99,14 @@ html,body{
 	
 }
 .warting{
-	animation: water .3s ease-in-out;
+	animation: water .5s ease-in-out;
 }
 @keyframes water{
 	from{
 		transform: rotate(-10deg);
 	}
 	to{
-		transform: rotate(-10deg);
+		transform: rotate(-30deg);
 	}
 }
 .pie{
@@ -131,14 +124,19 @@ html,body{
 	height: 100%;
 }
 .modal{
+	display: none;
 	position: fixed;
 	left: 0;
 	right: 0;
 	top: 0;
 	bottom: 0;
-	background: rgba(0,0,0,.3);
+	background: rgba(0,0,0,0);
 	z-index: 50;
+}
+.modal-wraps{
 	display: flex;
+	height: 100%;
+	width: 100%;
 	align-items:center;
 	justify-content:center;
 }
@@ -147,6 +145,8 @@ html,body{
 	background: rgba(255,255,255,.8);
 	border-radius: 1rem;
 	color: #434B56;
+	padding-top: 1rem;
+	box-sizing: border-box;
 }
 .seed-box{
 	height: 54.7rem;
@@ -165,20 +165,49 @@ html,body{
 }
 .seed-list{
 	height: 20rem;
+	padding: 0 1.25rem;
+	margin-top: 1.25rem;
+}
+.seed-list li{
+	display: flex;
+	background: #FBDB68;
+	margin-bottom: 1.5rem;
+	border-radius: 1rem;
+	height: 7.5rem;
+	line-height: 7.5rem;
+	padding-left: 1.5rem;
+	box-sizing: border-box;
+}
+.seed-icon{
+	width: 6rem;
+	height: 7.5rem;
+	padding-top: .75rem;
+	box-sizing: border-box;
+}
+.seed-name{
+	font-size: 1.5rem;
+}
+.last-times-wraps{
+	font-size: 1rem;
+	margin-left: 2rem;
+}
+.cost-wraps{
+	width: 6.5rem;
+	height: 2.7rem;
+	line-height: 2.7rem;
+	text-align: center;
+	background: #E25F10;
+	color: #fff;
+	margin-top: 2.4rem;
+	margin-left: 1.5rem;
+	border-radius: .5rem;
+	font-size: 1.3rem;
 }
 .pagination-block{
 	position: absolute;
     width: 100%;
     left: 0;
     bottom: 1rem;
-}
-.scalSmall{
-	transform: scale(0);
-	transition: .3s;
-}
-.scalBig{
-	transform: scale(1);
-	transition: .3s;
 }
 .coin-box{
 	height: 28rem;
@@ -212,4 +241,111 @@ html,body{
 }
 .vodio-btn{
 	margin-top: 2rem;
+}
+.close-btn{
+	display: block;
+	width: 4.1rem;
+	height: 4.1rem;
+	position: absolute;
+	right: -1rem;
+	top:-2.5rem;
+}
+.ticket-box{
+	width: 30rem;
+	height: 34.1rem;
+	background: #FFE558;
+}
+.ticket-wraper{
+	padding: 4rem 1.25rem 2.1rem 1.25rem;
+	box-sizing: border-box;
+}
+.ticket-container{
+	height: 22rem;
+	background: #FAFABB;
+	border-radius: 1rem;
+	padding: 2.5rem 2.3rem;
+	box-sizing: border-box;
+}
+.ticket-desc{
+	text-align: center;
+	font-size: 1.5rem;
+	line-height: 2.1rem;
+	margin-top: 2.7rem;
+}
+.green-btn{
+	display: block;
+	width: 10rem;
+	height: 3rem;
+	background: url('../images/btn.png') no-repeat;
+	background-size: 100% 100%;
+	text-align: center;
+	line-height: 3rem;
+	font-size: 1.3rem;
+	color: #fff;
+	margin: 0 auto;
+	margin-top: 1.9rem;
+}
+
+.invite-box{
+	height: 28rem;
+}
+
+.guide-modal{
+	background: rgba(0,0,0,.4);
+	display: none;
+}
+.guide01-pic{
+	position: absolute;
+	width: 26rem;
+	bottom: 17rem;
+	right: 1rem;
+}
+.guide02-pic{
+	position: absolute;
+	width: 30rem;
+	top: 7rem;
+	right: 4rem;
+}
+.guide03-pic{
+	position: absolute;
+	width: 26rem;
+	bottom: 12.8rem;
+	right: 11rem;
+}
+.guide04-pic{
+	position: absolute;
+	width: 21rem;
+	bottom: 7rem;
+	right: 0;
+}
+.guide05-pic{
+	position: absolute;
+	width: 30rem;
+	bottom: 13rem;
+	right: 6.5rem;
+}
+.purchase-desc{
+	text-align: center;
+	font-size: 1.5rem;
+}
+.btn-groups{
+	display: flex;
+	justify-content:center;
+	margin-top:3rem;
+}
+.btn-groups a{
+	width: 10rem;
+	height: 3rem;
+	color: #fff;
+	font-size: 1.3rem;
+	border-radius: .5rem;
+	text-align: center;
+	line-height: 3rem;
+}
+.cancelBtn{
+	background: #FFAC3D;
+	margin-right: 1.8rem;
+}
+.surelBtn{
+	background: #7BD84F;
 }

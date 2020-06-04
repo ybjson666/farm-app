@@ -10,8 +10,83 @@ $(function(){
 	var left=0;
 	var isWarter=false;//能否浇水
 	var isClick=false;//能否点击其他土地
+	var isFirst=localStorage.getItem('isFirst')||0;//0是第一次进来1不是;
+
+	function guide(step){//引导过程函数
+		switch(step){
+			case 1:
+				$(".guide01-pic").show();
+				$(".guide02-pic").hide();
+				$(".guide03-pic").hide();
+				$(".guide04-pic").hide();
+				$(".guide05-pic").hide();
+				break;
+			case 2:
+				$(".guide01-pic").hide();
+				$(".guide02-pic").show();
+				$(".guide03-pic").hide();
+				$(".guide04-pic").hide();
+				$(".guide05-pic").hide();
+				$(".seed-modal").show();
+				break;
+			case 3:
+				$(".guide01-pic").hide();
+				$(".guide02-pic").hide();
+				$(".guide03-pic").show();
+				$(".guide04-pic").hide();
+				$(".guide05-pic").hide();
+				$(".seed-modal").hide();
+				break;
+			case 4:
+				$(".guide01-pic").hide();
+				$(".guide02-pic").hide();
+				$(".guide03-pic").hide();
+				$(".guide04-pic").show();
+				$(".guide05-pic").hide();
+				break;
+			case 5:
+				$(".guide01-pic").hide();
+				$(".guide02-pic").hide();
+				$(".guide03-pic").hide();
+				$(".guide04-pic").hide();
+				$(".guide05-pic").show();
+				break;
+			case 6:
+				$(".guide01-pic").hide();
+				$(".guide02-pic").hide();
+				$(".guide03-pic").hide();
+				$(".guide04-pic").hide();
+				$(".guide05-pic").hide();
+				$(".guide-modal").hide();
+				localStorage.setItem('isFirst',1);
+				break;
+			default:
+				break;
+		}
+	}
+	if(isFirst==0){
+		$(".guide-modal").show();
+		guide(1);
+	}
 	
-	
+	$(".guide01-pic").click(function(){
+		guide(2);
+	})
+	$(".guide02-pic").click(function(){
+		guide(3);
+	})
+	$(".guide03-pic").click(function(){
+		guide(4);
+	})
+	$(".guide04-pic").click(function(){
+		guide(5);
+	})
+	$(".guide05-pic").click(function(){
+		guide(6);
+	})
+
+
+
 	$('.pagination').pagination({
     	mode: 'fixed',
     	totalData: 50,
@@ -81,13 +156,13 @@ $(function(){
 		}
 	})
 
-	$(".water-block").click(function(e){
-		e.preventDefault();
-		hideKettle();
-	});
-	$("#kettleDown").click(function(e){
-		hideKettle();
-	})
+	// $(".water-block").click(function(e){
+	// 	e.preventDefault();
+	// 	hideKettle();
+	// });
+	// $("#kettleDown").click(function(e){
+	// 	hideKettle();
+	// })
 
 	function hideKettle(){
 		$("#kettle").css({transform:'translate(0px,0px) rotate(0deg)',transition:'.3s',
@@ -147,6 +222,9 @@ $(function(){
 			$("#kettle").css({'left':-absL+'rem','top':-absT+'rem','background':'url(./images/jiaoshui.gif)',
 			'background-size':'100% 100%',transform:'rotate(-10deg)', transition:'.3s'});
 			isClick=false;
+			setTimeout(function(){
+				hideKettle();
+			},1200)
 		}
 		
 	})
@@ -163,14 +241,10 @@ $(function(){
 	];
 	/*浇水饼状图*/
 	function drawPie(data){
-		
 	   var canvas = document.getElementById("canvas");
 	   var w=$("#canvas").width();
 	   canvas.width = w;//设置canvas宽
        canvas.height = w;//设置canvas高
-
-       //设置宽高不从css中设置
-     
         //获取上下文
        var ctx = canvas.getContext("2d");
        //画图
@@ -181,7 +255,6 @@ $(function(){
             var startAngle = tempAngle*Math.PI/180;//起始弧度
             var angle = data[i].value*360;
             var endAngle = (tempAngle+angle)*Math.PI/180;//结束弧度
-          
             ctx.beginPath();
             ctx.moveTo(x0,y0);
             ctx.fillStyle = data[i].color;
@@ -189,24 +262,22 @@ $(function(){
             ctx.fill();
             tempAngle += angle;
         }
-        
 	}
 	drawPie(data);
 
 	/*打开弹窗*/
 	function openModal(el){
-		$(el).removeClass('scalSmall').addClass('scalBig');
+		$(el).fadeIn(200);
 	}
 	/*关闭弹窗*/
 	function closeModal(el){
-		$(el).removeClass('scalBig').addClass('scalSmall');
+		$(el).fadeOut(200);
 	}
-
-	/**打开购买种子弹窗 */
+	/**打开种子商店弹窗 */
 	$(".purchase").click(function(){
 		openModal(".seed-modal");
 	})
-	/**关闭购买种子弹窗 */
+	/**关闭种子商店弹窗 */
 	$(".seed-close-btn").click(function(){
 		closeModal(".seed-modal");
 	})
@@ -215,4 +286,30 @@ $(function(){
 	$(".coin-close-btn").click(function(){
 		closeModal(".coin-modal");
 	})
+
+	/**关闭水果券弹框 */
+	$(".ticket-close-btn").click(function(){
+		closeModal(".ticket-modal");
+	})
+
+	/**关闭邀请好友解锁土地弹框 */
+	$(".invite-close-btn").click(function(){
+		closeModal(".invite-modal");
+	})
+
+	/**关闭购买种子弹框 */
+	$(".buy-close-btn").click(function(){
+		closeModal(".buy-modal");
+	})
+
+	/**关闭看视频收获水果弹框 */
+	$(".video-close-btn").click(function(){
+		closeModal(".video-modal");
+	})
+
+	/**关闭确认购买种子弹窗 */
+	$(".purchase-close-btn").click(function(){
+		closeModal(".purchase-modal");
+	})
+	
 })

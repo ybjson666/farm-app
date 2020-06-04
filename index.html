@@ -92,39 +92,173 @@
 		</div>
 	</div>
 	
-	<!--购买种子弹窗-->
-	<div class="seed-modal scalSmall modal">
-		<div class="seed-box modal-box">
-			<div class="wrap">
-				<a href="javascript:" class="close-btn seed-close-btn">关闭</a>
-				<h2 class="seed-title">种子商店</h2>
-				<p class="seed-desc">任选下列1种种子，浇水免费领取水果</p>
-				<ul class="seed-list"></ul>
-				<div class="pagination-block">
-					<div class="pagination"></div>
+	<!--种子商店弹窗-->
+	<div class="seed-modal modal">
+		<div class="modal-wraps">
+			<div class="seed-box modal-box">
+				<div class="wrap">
+					<a href="javascript:" class="close-btn seed-close-btn"><img src="./images/close.png" alt=""></a>
+					<h2 class="seed-title">种子商店</h2>
+					<p class="seed-desc">任选下列1种种子，浇水免费领取水果</p>
+					<ul class="seed-list">
+						<li>
+							<div class="seed-icon"><img src="./images/seed.png" alt=""></div>
+							<span class="seed-name">柠檬</span>
+							<div class="last-times-wraps">剩余：<span class="last-times">15</span>天</div>
+							<div class="cost-wraps"><span class="seed-cost">5</span>金币</div>
+						</li>
+						<li>
+							<div class="seed-icon"><img src="./images/hmg.png" alt=""></div>
+							<span class="seed-name">柠檬</span>
+							<div class="last-times-wraps">剩余：<span class="last-times">15</span>天</div>
+							<div class="cost-wraps"><span class="seed-cost">5</span>金币</div>
+						</li>
+						<li>
+							<div class="seed-icon"><img src="./images/seed.png" alt=""></div>
+							<span class="seed-name">柠檬</span>
+							<div class="last-times-wraps">剩余：<span class="last-times">15</span>天</div>
+							<div class="cost-wraps"><span class="seed-cost">5</span>金币</div>
+						</li>
+						<li>
+							<div class="seed-icon"><img src="./images/hmg.png" alt=""></div>
+							<span class="seed-name">柠檬</span>
+							<div class="last-times-wraps">剩余：<span class="last-times">15</span>天</div>
+							<div class="cost-wraps"><span class="seed-cost">5</span>金币</div>
+						</li>
+						<li>
+							<div class="seed-icon"><img src="./images/seed.png" alt=""></div>
+							<span class="seed-name">柠檬</span>
+							<div class="last-times-wraps">剩余：<span class="last-times">15</span>天</div>
+							<div class="cost-wraps"><span class="seed-cost">5</span>金币</div>
+						</li>
+					</ul>
+					<div class="pagination-block">
+						<div class="pagination"></div>
+					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 
 	<!--金币不足弹窗-->
-	<div class="coin-modal modal scalSmall">
-		<div class="coin-box modal-box">
-			<div class="wrap">
-				<a href="javascript:" class="close-btn coin-close-btn">关闭</a>
-				<h2 class="seed-title">金币不足</h2>
-				<div class="coin-wraper">
-					<img src="./images/coins.png" alt="">
+	<div class="coin-modal modal">
+		<div class="modal-wraps">
+			<div class="coin-box modal-box">
+				<div class="wrap">
+					<a href="javascript:" class="close-btn coin-close-btn"><img src="./images/close.png" alt=""></a>
+					<h2 class="seed-title">金币不足</h2>
+					<div class="coin-wraper">
+						<img src="./images/coins.png" alt="">
+					</div>
+					<p class="alerting">您的金币不足哟，快去<br/> 看广告赚金币吧</p>
+					<a href="javascript:" class="button ad-btn">看广告赚金币</a>
 				</div>
-				<p class="alerting">您的金币不足哟，快去<br/> 看广告赚金币吧</p>
-				<a href="javascript:" class="button vodio-btn">看广告赚金币</a>
 			</div>
+		</div>
+	</div>
+
+	<!--水果券弹窗-->
+	<div class="modal ticket-modal">
+		<div class="modal-wraps">
+			<div class="ticket-box modal-box">
+				<div class="wrap">
+					<a href="javascript:" class="close-btn ticket-close-btn"><img src="./images/close.png" alt=""></a>
+					<div class="ticket-wraper">
+						<div class="ticket-container">
+							<div class="ticket-pic"><img src="./images/ticket.png" alt=""></div>
+							<p class="ticket-desc">水果兑换券（苹果三斤）<br/> 请在我的卡券查看</p>
+						</div>
+						<a href="javascript:" class="green-btn seek-btn">立即查看</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!--邀请好友解锁土地弹框-->
+	<div class="modal invite-modal">
+		<div class="modal-wraps">
+			<div class="invite-box modal-box">
+				<div class="wrap">
+					<a href="javascript:" class="close-btn invite-close-btn"><img src="./images/close.png" alt=""></a>
+					<h2 class="seed-title">邀请好友解锁土地</h2>
+					<div class="coin-wraper">
+						<img src="./images/share_land.png" alt="">
+					</div>
+					<p class="alerting">您的土地被系统征用了，邀请<br/> 好友可解除系统征用</p>
+					<a href="javascript:" class="green-btn invite-btn">立即邀请</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!--购买种子弹框-->
+	<div class="modal buy-modal">
+		<div class="modal-wraps">
+			<div class="invite-box modal-box">
+				<div class="wrap">
+					<a href="javascript:" class="close-btn buy-close-btn"><img src="./images/close.png" alt=""></a>
+					<h2 class="seed-title">购买种子</h2>
+					<div class="coin-wraper">
+						<img src="./images/seed.png" alt="">
+					</div>
+					<p class="alerting">您当前未种植种子，快去<br/> 商店挑选种子进行种植</p>
+					<a href="javascript:" class="green-btn buy-btn">立即邀请</a>
+				</div>
+			</div>	
+		</div>
+	</div>
+
+	<!--确定购买种子弹框-->
+	<div class="modal purchase-modal">
+		<div class="modal-wraps">
+			<div class="invite-box modal-box">
+				<div class="wrap">
+					<a href="javascript:" class="close-btn purchase-close-btn"><img src="./images/close.png" alt=""></a>
+					<h2 class="seed-title">确定购买</h2>
+					<div class="coin-wraper">
+						<img src="./images/seed.png" alt="" id="seedIcon">
+					</div>
+					<p class="purchase-desc">消耗<span class="cost-coin">5</span>金币，购买并种植<span class="fruit-name">苹果</span>种子</p>
+					<div class="btn-groups">
+						<a href="javascript:" class="cancelBtn">取消</a>
+						<a href="javascript:" class="surelBtn">确定</a>
+					</div>
+				</div>
+			</div>	
+		</div>
+	</div>
+
+	<!--看视频收获水果弹框-->
+	<div class="modal video-modal">
+		<div class="modal-wraps">
+			<div class="invite-box modal-box">
+				<div class="wrap">
+					<a href="javascript:" class="close-btn video-close-btn"><img src="./images/close.png" alt=""></a>
+					<h2 class="seed-title">看视频收获水果</h2>
+					<div class="coin-wraper">
+						<img src="./images/video.png" alt="">
+					</div>
+					<p class="alerting">您的水果成熟了呦，快去<br/> 看广告收获水果吧</p>
+					<a href="javascript:" class="green-btn video-btn">收获水果</a>
+				</div>
+			</div>	
+		</div>
+	</div>
+
+	<!--引导图-->
+	<div class="modal guide-modal">
+		<div class="wrap">
+			<div class="guide01-pic"><img src="./images/gui01.png" alt=""></div>
+			<div class="guide02-pic"><img src="./images/gui02.png" alt=""></div>
+			<div class="guide03-pic"><img src="./images/gui03.png" alt=""></div>
+			<div class="guide04-pic"><img src="./images/gui04.png" alt=""></div>
+			<div class="guide05-pic"><img src="./images/gui05.png" alt=""></div>
 		</div>
 	</div>
 </body>
 </html>
 <script src="js/jquery.min.js"></script>
-
 <script src="js/pagination.js"></script>
 <script src="js/tool.js"></script>
 <script src="js/app.js"></script>
