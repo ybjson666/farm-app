@@ -6,6 +6,7 @@
 	<title>农场</title>
 	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="css/pagination.css">
+	<link rel="stylesheet" href="css/loading.css">
 	<link rel="stylesheet" href="css/main.css">
 	<script src="js/rem.js"></script>
 </head>
@@ -76,7 +77,7 @@
 				</div>
 			</li>
 		</ul>
-		<div class="foodgrocery"><img src="./images/caicang.png" alt=""></div>
+		<div class="foodgrocery"><img src="./images/caicang.png" alt="" id="framType"></div>
 		<div class="shopping"><img src="./images/jysc.png" alt=""></div>
 		<div class="bottom-btns">
 			<div class="purchase"><img src="./images/gmzz.png" alt=""></div>
@@ -88,6 +89,17 @@
 						<canvas id="canvas"></canvas>
 					</div>
 				</div>
+			</div>
+		</div>
+		<span class="guide-point">游戏指引</span>
+		<div class="user-info-block">
+			<div class="user-rows">
+				<span class="avtar"><img src="./images/avtar.jpg" alt="" /></span>
+				<span class="user-name">lucy</span>
+			</div>
+			<div class="coin-rows">
+				<span class="coin-pic"><img src="./images/coin.png" alt=""/></span>
+				<span class="coin-nums">12225</span>
 			</div>
 		</div>
 	</div>
@@ -254,6 +266,19 @@
 			<div class="guide03-pic"><img src="./images/gui03.png" alt=""></div>
 			<div class="guide04-pic"><img src="./images/gui04.png" alt=""></div>
 			<div class="guide05-pic"><img src="./images/gui05.png" alt=""></div>
+		</div>
+	</div>
+	<!--loading框-->
+	<div class="load-modal">
+		<div class="load-container">
+			<div class="loader-wraper">
+				<div class="loader">
+					<div class="point point1"></div>
+					<div class="point point2"></div>
+					<div class="point point3"></div>
+					<div class="point point4"></div>
+				</div>
+			</div>
 		</div>
 	</div>
 </body>

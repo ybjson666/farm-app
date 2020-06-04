@@ -11,7 +11,8 @@ $(function(){
 	var isWarter=false;//能否浇水
 	var isClick=false;//能否点击其他土地
 	var isFirst=localStorage.getItem('isFirst')||0;//0是第一次进来1不是;
-	var isWarting=false;//是否正在浇水
+	var isWarting=false;//是否正在浇水;
+	var farmType=0;//0是菜场，1是农场
 
 	function guide(step){//引导过程函数
 		switch(step){
@@ -86,7 +87,15 @@ $(function(){
 		guide(6);
 	})
 
-
+	$(".foodgrocery").click(function(){//农场类型切换
+		// if(farmType==0){//菜场时请求菜场的数据
+		// 	farmType=1;
+		// }else{//农场时请求农场的数据;
+		// 	farmType=0;
+		// }
+		farmType=farmType==0?1:0;
+		console.log(farmType)
+	})
 
 	$('.pagination').pagination({
     	mode: 'fixed',
@@ -237,42 +246,6 @@ $(function(){
 		
 	})
 
-	var data = [
-		{
-			"value":"0.9",
-			"color":"rgba(255,255,255,.6)",
-		},
-		{
-			"value":"0.1",
-			"color":"transparent",
-		}
-	];
-	/*浇水饼状图*/
-	function drawPie(data){
-	   var canvas = document.getElementById("canvas");
-	   var w=$("#canvas").width();
-	   canvas.width = w;//设置canvas宽
-       canvas.height = w;//设置canvas高
-        //获取上下文
-       var ctx = canvas.getContext("2d");
-       //画图
-        var x0  = w/2,y0 = w/2;//圆心
-        var radius = w/2;
-        var tempAngle = -90;//画圆的起始角度
-		for(var i = 0;i<data.length;i++){
-            var startAngle = tempAngle*Math.PI/180;//起始弧度
-            var angle = data[i].value*360;
-            var endAngle = (tempAngle+angle)*Math.PI/180;//结束弧度
-            ctx.beginPath();
-            ctx.moveTo(x0,y0);
-            ctx.fillStyle = data[i].color;
-            ctx.arc(x0,y0,radius,startAngle,endAngle);
-            ctx.fill();
-            tempAngle += angle;
-        }
-	}
-	drawPie(data);
-
 	/*打开弹窗*/
 	function openModal(el){
 		$(el).fadeIn(200);
@@ -319,5 +292,51 @@ $(function(){
 	$(".purchase-close-btn").click(function(){
 		closeModal(".purchase-modal");
 	})
+
+	/*游戏引导*/
+	$(".guide-point").click(function(){
+		$(".guide-modal").show();
+		guide(1)
+	})
+
+
+
+	var data = [
+		{
+			"value":"0.9",
+			"color":"rgba(255,255,255,.6)",
+		},
+		{
+			"value":"0.1",
+			"color":"transparent",
+		}
+	];
+	/*浇水饼状图*/
+	function drawPie(data){
+	   var canvas = document.getElementById("canvas");
+	   var w=$("#canvas").width();
+	   canvas.width = w;//设置canvas宽
+       canvas.height = w;//设置canvas高
+        //获取上下文
+       var ctx = canvas.getContext("2d");
+       //画图
+        var x0  = w/2,y0 = w/2;//圆心
+        var radius = w/2;
+        var tempAngle = -90;//画圆的起始角度
+		for(var i = 0;i<data.length;i++){
+            var startAngle = tempAngle*Math.PI/180;//起始弧度
+            var angle = data[i].value*360;
+            var endAngle = (tempAngle+angle)*Math.PI/180;//结束弧度
+            ctx.beginPath();
+            ctx.moveTo(x0,y0);
+            ctx.fillStyle = data[i].color;
+            ctx.arc(x0,y0,radius,startAngle,endAngle);
+            ctx.fill();
+            tempAngle += angle;
+        }
+	}
+
+	//drawPie(data);
+
 	
 })
