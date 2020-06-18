@@ -7,99 +7,40 @@
 	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="css/pagination.css">
 	<link rel="stylesheet" href="css/loading.css">
-	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/main.css?v=1.8">
 	<script src="js/rem.js"></script>
 </head>
 <body>
 	<div class="container">
-		<ul class="land-list">
-			<li class="land land-one ">
-				<div class="wrap">
-					<div class="unlock-pic land-pic"><img src="./images/tdwjs.png" alt=""></div>
-					<div class="lock-pic land-pic"><img src="./images/tdjs.png" alt=""></div>
-					<div class="seed-pic"><img src=""  class="seed" alt=""/></div>
-				</div>
-			</li>
-			<li class="land land-two">
-				<div class="wrap">
-					<div class="unlock-pic land-pic"><img src="./images/tdwjs.png" alt=""></div>
-					<div class="lock-pic land-pic"><img src="./images/tdjs.png" alt=""></div>
-					<div class="seed-pic"><img src=""  class="seed" alt=""/></div>
-				</div>
-			</li>
-			<li class="land land-three">
-				<div class="wrap">
-					<div class="unlock-pic land-pic"><img src="./images/tdwjs.png" alt=""></div>
-					<div class="lock-pic land-pic"><img src="./images/tdjs.png" alt=""></div>
-					<div class="seed-pic"><img src=""  class="seed" alt=""/></div>
-				</div>
-			</li>
-			<li class="land land-four">
-				<div class="wrap">
-					<div class="unlock-pic land-pic"><img src="./images/tdwjs.png" alt=""></div>
-					<div class="lock-pic land-pic"><img src="./images/tdjs.png" alt=""></div>
-					<div class="seed-pic"><img src=""  class="seed" alt=""/></div>
-				</div>
-			</li>
-			<li class="land land-five">
-				<div class="wrap">
-					<div class="unlock-pic land-pic"><img src="./images/tdwjs.png" alt=""></div>
-					<div class="lock-pic land-pic"><img src="./images/tdjs.png" alt=""></div>
-					<div class="seed-pic"><img src=""  class="seed" alt=""/></div>
-				</div>
-			</li>
-			<li class="land land-six">
-				<div class="wrap">
-					<div class="unlock-pic land-pic"><img src="./images/tdwjs.png" alt=""></div>
-					<div class="lock-pic land-pic"><img src="./images/tdjs.png" alt=""></div>
-					<div class="seed-pic"><img src=""  class="seed" alt=""/></div>
-				</div>
-			</li>
-			<li class="land land-seven">
-				<div class="wrap">
-					<div class="unlock-pic land-pic"><img src="./images/tdwjs.png" alt=""></div>
-					<div class="lock-pic land-pic"><img src="./images/tdjs.png" alt=""></div>
-					<div class="seed-pic"><img src=""  class="seed" alt=""/></div>
-				</div>
-			</li>
-			<li class="land land-eight">
-				<div class="wrap">
-					<div class="unlock-pic land-pic"><img src="./images/tdwjs.png" alt=""></div>
-					<div class="lock-pic land-pic"><img src="./images/tdjs.png" alt=""></div>
-					<div class="seed-pic"><img src=""  class="seed" alt=""/></div>
-				</div>
-			</li>
-			<li class="land land-nine">
-				<div class="wrap">
-					<div class="unlock-pic land-pic"><img src="./images/tdwjs.png" alt=""></div>
-					<div class="lock-pic land-pic"><img src="./images/tdjs.png" alt=""></div>
-					<div class="seed-pic"><img src=""  class="seed" alt=""/></div>
-				</div>
-			</li>
-		</ul>
-		<div class="foodgrocery"><img src="./images/caicang.png" alt="" id="framType"></div>
-		<div class="shopping"><img src="./images/jysc.png" alt=""></div>
+		<div class="header"></div>
+		<div class="footer"></div>
+		<div class="contents">
+			<div class="land-wraper">
+				<ul class="land-list"></ul>
+			</div>
+		</div>
+		<div class="top-btns">
+			<div class="foodgrocery"><img src="./images/caicang.png" alt="" id="framType"></div>
+			<div class="shopping"><img src="./images/jysc.png" alt=""></div>
+		</div>
 		<div class="bottom-btns">
 			<div class="purchase"><img src="./images/gmzz.png" alt=""></div>
 			<div class="water-block">
 				<div class="wrap">
 					<div id="kettle"></div>
 					<img src="./images/shuihu2.png"  id="kettleDown" alt=""/>
-					<div class="pie">
-						<canvas id="canvas"></canvas>
-					</div>
 				</div>
 			</div>
 		</div>
 		<span class="guide-point">游戏指引</span>
 		<div class="user-info-block">
 			<div class="user-rows">
-				<span class="avtar"><img src="./images/avtar.jpg" alt="" /></span>
-				<span class="user-name">lucy</span>
+				<span class="avtar"><img src="" alt="" id="avtar" /></span>
+				<span class="user-name"></span>
 			</div>
 			<div class="coin-rows">
 				<span class="coin-pic"><img src="./images/coin.png" alt=""/></span>
-				<span class="coin-nums">12225</span>
+				<span class="coin-nums"></span>
 			</div>
 		</div>
 	</div>
@@ -112,38 +53,7 @@
 					<a href="javascript:" class="close-btn seed-close-btn"><img src="./images/close.png" alt=""></a>
 					<h2 class="seed-title">种子商店</h2>
 					<p class="seed-desc">任选下列1种种子，浇水免费领取水果</p>
-					<ul class="seed-list">
-						<li>
-							<div class="seed-icon"><img src="./images/seed.png" alt=""></div>
-							<span class="seed-name">柠檬</span>
-							<div class="last-times-wraps">剩余：<span class="last-times">15</span>天</div>
-							<div class="cost-wraps"><span class="seed-cost">5</span>金币</div>
-						</li>
-						<li>
-							<div class="seed-icon"><img src="./images/hmg.png" alt=""></div>
-							<span class="seed-name">柠檬</span>
-							<div class="last-times-wraps">剩余：<span class="last-times">15</span>天</div>
-							<div class="cost-wraps"><span class="seed-cost">5</span>金币</div>
-						</li>
-						<li>
-							<div class="seed-icon"><img src="./images/seed.png" alt=""></div>
-							<span class="seed-name">柠檬</span>
-							<div class="last-times-wraps">剩余：<span class="last-times">15</span>天</div>
-							<div class="cost-wraps"><span class="seed-cost">5</span>金币</div>
-						</li>
-						<li>
-							<div class="seed-icon"><img src="./images/hmg.png" alt=""></div>
-							<span class="seed-name">柠檬</span>
-							<div class="last-times-wraps">剩余：<span class="last-times">15</span>天</div>
-							<div class="cost-wraps"><span class="seed-cost">5</span>金币</div>
-						</li>
-						<li>
-							<div class="seed-icon"><img src="./images/seed.png" alt=""></div>
-							<span class="seed-name">柠檬</span>
-							<div class="last-times-wraps">剩余：<span class="last-times">15</span>天</div>
-							<div class="cost-wraps"><span class="seed-cost">5</span>金币</div>
-						</li>
-					</ul>
+					<ul class="seed-list seed-list1"></ul>
 					<div class="pagination-block">
 						<div class="pagination"></div>
 					</div>
@@ -151,7 +61,6 @@
 			</div>
 		</div>
 	</div>
-
 	<!--金币不足弹窗-->
 	<div class="coin-modal modal">
 		<div class="modal-wraps">
@@ -162,8 +71,8 @@
 					<div class="coin-wraper">
 						<img src="./images/coins.png" alt="">
 					</div>
-					<p class="alerting">您的金币不足哟，快去<br/> 看广告赚金币吧</p>
-					<a href="javascript:" class="button ad-btn">看广告赚金币</a>
+					<p class="alerting">您的金币不足哟，快去<br/> 做任务赚金币吧</p>
+					<a href="javascript:" class="button ad-btn">做任务赚金币</a>
 				</div>
 			</div>
 		</div>
@@ -178,7 +87,7 @@
 					<div class="ticket-wraper">
 						<div class="ticket-container">
 							<div class="ticket-pic"><img src="./images/ticket.png" alt=""></div>
-							<p class="ticket-desc">水果兑换券（苹果三斤）<br/> 请在我的卡券查看</p>
+							<p class="ticket-desc">水果兑换券（<span class="fruit"></span>）<br/> 请在我的卡券查看</p>
 						</div>
 						<a href="javascript:" class="green-btn seek-btn">立即查看</a>
 					</div>
@@ -215,26 +124,45 @@
 						<img src="./images/seed.png" alt="">
 					</div>
 					<p class="alerting">您当前未种植种子，快去<br/> 商店挑选种子进行种植</p>
-					<a href="javascript:" class="green-btn buy-btn">立即邀请</a>
+					<!-- <a href="javascript:" class="green-btn buy-btn">立即邀请</a> -->
 				</div>
 			</div>	
 		</div>
 	</div>
-
+	
+	<!--土地用完弹框-->
+	<div class="modal over-modal">
+		<div class="modal-wraps">
+			<div class="invite-box modal-box">
+				<div class="wrap">
+					<a href="javascript:" class="close-btn over-close-btn"><img src="./images/close.png" alt=""></a>
+					<h2 class="seed-title">土地已用完</h2>
+					<div class="coin-wraper">
+						<img src="./images/over.png" alt="">
+					</div>
+					<p class="alerting">你的土地已种满了，无法继续种植</p>
+					<a href="javascript:" class="green-btn know-btn">我知道了</a>
+				</div>
+			</div>	
+		</div>
+	</div>
 	<!--确定购买种子弹框-->
 	<div class="modal purchase-modal">
 		<div class="modal-wraps">
 			<div class="invite-box modal-box">
 				<div class="wrap">
-					<a href="javascript:" class="close-btn purchase-close-btn"><img src="./images/close.png" alt=""></a>
+					<button class="close-btn purchase-close-btn"><img src="./images/close.png" alt=""></button>
 					<h2 class="seed-title">确定购买</h2>
 					<div class="coin-wraper">
-						<img src="./images/seed.png" alt="" id="seedIcon">
+						<img src="" alt="" id="seedIcon">
 					</div>
-					<p class="purchase-desc">消耗<span class="cost-coin">5</span>金币，购买并种植<span class="fruit-name">苹果</span>种子</p>
+					<p class="purchase-desc">消耗
+						<span class="cost-coin"></span>金币，购买并种植
+						<span class="fruit-name"></span>种子
+					</p>
 					<div class="btn-groups">
-						<a href="javascript:" class="cancelBtn">取消</a>
-						<a href="javascript:" class="surelBtn">确定</a>
+						<button class="cancelBtn">取消</button>
+						<button class="surelBtn">确定</button>
 					</div>
 				</div>
 			</div>	
@@ -261,11 +189,11 @@
 	<!--引导图-->
 	<div class="modal guide-modal">
 		<div class="wrap">
-			<div class="guide01-pic"><img src="./images/gui01.png" alt=""></div>
-			<div class="guide02-pic"><img src="./images/gui02.png" alt=""></div>
-			<div class="guide03-pic"><img src="./images/gui03.png" alt=""></div>
-			<div class="guide04-pic"><img src="./images/gui04.png" alt=""></div>
-			<div class="guide05-pic"><img src="./images/gui05.png" alt=""></div>
+			<div class="guide-pic guide01-pic"><img src="./images/yin01.png" alt="" id="guid1"/></div>
+			<div class="guide-pic guide02-pic"><img src="./images/yin02.png" alt="" id="guid2"/></div>
+			<div class="guide-pic guide03-pic"><img src="./images/yin03.png" alt="" id="guid3"/></div>
+			<div class="guide-pic guide04-pic"><img src="./images/yin04.png" alt="" id="guid4"/></div>
+			<div class="guide-pic guide05-pic"><img src="./images/yin05.png" alt="" id="guid5"/></div>
 		</div>
 	</div>
 	<!--loading框-->
@@ -285,5 +213,8 @@
 </html>
 <script src="js/jquery.min.js"></script>
 <script src="js/pagination.js"></script>
+<script src="js/farmsData.js"></script>
+<script src="js/lottle.js"></script>
 <script src="js/tool.js"></script>
 <script src="js/app.js"></script>
+

@@ -1,0 +1,26 @@
+/*
+* @Author: Administrator
+* @Date:   2020-06-09 17:20:16
+* @Last Modified by:   Administrator
+* @Last Modified time: 2020-06-09 17:25:47
+*/
+.container{
+	padding: 1rem;
+	padding-top:2rem;
+	box-sizing: border-box;
+}
+.title{
+	line-height: 2rem;
+	text-align: center;
+	font-size: 1.8rem;
+	font-weight: 700;
+}
+.contents{
+	margin-top: 3rem;
+}
+.line{
+	line-height: 2rem;
+	margin-bottom: .5rem;
+	text-align: justify;
+	font-size: 1.4rem;
+}

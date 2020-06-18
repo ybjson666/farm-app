@@ -1,4 +1,8 @@
+//var common_url='http://'+window.location.host;
+var common_url='http://php.zbyj.top';
+
 function requestFunc(param,callBack){
+    // toggleModal(JSON.stringify(param.datas))
     $.ajax({
         url:common_url+param.url,
         data:param.datas,
